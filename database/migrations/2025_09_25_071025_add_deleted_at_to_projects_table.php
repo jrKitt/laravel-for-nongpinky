@@ -6,21 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        // สร้าง Table koko ที่ database
-        Schema::create('koko', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('phone');
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            //
         });
     }
 
-
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-
+        Schema::table('projects', function (Blueprint $table) {
+            //
+        });
     }
 };
